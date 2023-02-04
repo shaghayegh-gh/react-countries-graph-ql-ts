@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import { LIST_COUNTRIES } from "./queries/countries-queries";
 import Container from "@mui/material/Container";
 import { CountriesType,Data } from "./types/global-types";
+import Error from "./components/error/error";
 
 function App() {
   const [countries, setCountries] = useState<CountriesType>([]);
@@ -14,7 +15,7 @@ function App() {
     }
   }, [data]);
 
-  if (error) return <p>error</p>;
+  if (error) return <Error message={error.message}/>;
 
   return (
     <Container sx={{ mt: 5, mb: 5, minHeight: "100vh" }}>
