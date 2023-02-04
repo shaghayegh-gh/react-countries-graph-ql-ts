@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import { countriesStyles, countriesBodyStyles } from "./countries-style";
 import { CountriesType } from "../../types/global-types";
+import CountriesHead from "../countries-head/countries-head";
 import Country from "../country/country";
 
 type ContainerProps = {
@@ -48,6 +49,7 @@ function Countries({ countries }: ContainerProps) {
 
   return (
     <Box sx={{ ...countriesStyles }}>
+      <CountriesHead />
       <Box sx={{ ...countriesBodyStyles }}>
         {items.map((c, i) => (
           <Country
