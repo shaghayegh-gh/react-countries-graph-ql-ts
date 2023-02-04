@@ -7,6 +7,7 @@ import { CountriesType, Data } from "./types/global-types";
 import Error from "./components/error/error";
 import Loading from "./components/loading/loading";
 import Countries from "./components/countries/countries";
+import Footer from "./components/footer/footer"
 
 function App() {
   const [countries, setCountries] = useState<CountriesType>([]);
@@ -27,6 +28,7 @@ function App() {
         {loading && <Loading />}
         {!loading && <Countries countries={countries} />}
       </Container>
+      <Footer />
     </>
   );
 }
