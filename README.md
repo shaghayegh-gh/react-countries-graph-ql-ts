@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Countries App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+This project is an example SPA written in `React` with `TypeScript` that shows a list of countries with their details using a public `GraphQL API`. When a country is clicked, the country's background will be changed. It is possible to search by code, continent and currency.
 
-In the project directory, you can run:
+The project uses a  public GraphQL API at this address: https://countries.trevorblades.com
 
-### `npm start`
+JavaScript version: [github.com/shaghayegh-gh/react-countries-graph-ql-js](https://github.com/shaghayegh-gh/react-countries-graph-ql-js)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How it looks
+<br/>
+<p align='center'>
+<img src='./docs/images/countries.png' alt="All countries list" style="max-width:600px">
+</p>
+<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How it works
+- Example value in the search box: `search: AD group: code`
+- The value of search can be:
+- When the value of `search` is `continent`, the value of `group` should be the continent code, not the continent name.
 
-### `npm test`
+<br/>
+<p align='center'>
+<img src='./docs/images/country-search.png' alt="search country" style="max-width:600px">
+</p>
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
+- Install [NodeJs](https://nodejs.org/en/download/)
+- Install [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-### `npm run build`
+## Getting started
+Install all the packages and run the project using the below commands:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Install packages
+npm install
+# Start the project
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The last command runs the app in the development mode. Now, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Dependencies added
+- `graphql`
+- `@apollo/client`
+- `@emotion/react`
+- `@emotion/styled`
+- `@mui/material`
+- `@mui/icons-material`
+- `react-debounce-input`
+- `react-infinite-scroller`
+- `@types/react-infinite-scroller`
