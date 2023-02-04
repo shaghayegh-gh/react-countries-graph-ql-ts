@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { LIST_COUNTRIES } from "./queries/countries-queries";
+import Header from "./components/header/header";
 import Container from "@mui/material/Container";
-import { CountriesType,Data } from "./types/global-types";
+import { CountriesType, Data } from "./types/global-types";
 import Error from "./components/error/error";
 import Loading from "./components/loading/loading";
 import Countries from "./components/countries/countries";
@@ -17,13 +18,16 @@ function App() {
     }
   }, [data]);
 
-  if (error) return <Error message={error.message}/>;
+  if (error) return <Error message={error.message} />;
 
   return (
-    <Container sx={{ mt: 5, mb: 5, minHeight: "100vh" }}>
-      {loading &&  <Loading />}
-      {!loading && <Countries countries={countries} />}
-    </Container>
+    <>
+      <Header />
+      <Container sx={{ mt: 5, mb: 5, minHeight: "100vh" }}>
+        {loading && <Loading />}
+        {!loading && <Countries countries={countries} />}
+      </Container>
+    </>
   );
 }
 
